@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 64px;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="hotcss" content="design-width=750">
+        <meta name="renderer" content="webkit|chrome">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="format-detection" content="telephone=no,email=no">
+        <meta name="ML-config" content="fullscreen=yes,preventMove=no">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>demo</title>
+
+        <!-- 引入flex公共样式 -->
+        <link rel="stylesheet" href="../static/css/global.css">
+        <!-- 引入头部底部公共样式 -->
+        <link rel="stylesheet" href="../static/css/main.css">
+        <!-- 引入自身外部样式 -->
+        <link rel="stylesheet" type="text/css" href="demo.css">
+
+        <link href="https://cdn.bootcss.com/Swiper/4.0.2/css/swiper.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/Swiper/4.0.2/js/swiper.min.js"></script>
+    </head>
+    <body>
+        <div class="container flex direction-column">
+            <div class="headerBox flex content-space-between items-center">
+                <div class="left flex items-center"><i class="icon one"></i>靖欣婚介</div>
+                <i class="icon two"></i>
+            </div>
+            <div class="content flex-col">
+                <header class="header">
+                    <div class="notice">公告通知：公告内容公告内容公告内容公告内容公告内容</div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex content-center items-center"><img src="../images/header.png" alt=""></div>
+                            <div class="swiper-slide flex content-center items-center"><img src="../images/header.png" alt=""></div>
+                            <div class="swiper-slide flex content-center items-center"><img src="../images/header.png" alt=""></div>
+                        </div>
+                        <!-- 分页器 -->
+                        <div class="swiper-pagination"></div>
+                    </div>  
+                </header>
+                <section class="section flex content-space-between items-center">
+                    <p>张大大先生，祝您在此开启您的姻缘之路！</p>
+                    <a href="javascript:">签到</a>
+                </section>
+                <article id="app">
+                    <div class="banner" >
+                        <div class="title">功臣红娘排行榜</div>
+                        <div class="cards flex">
+                            <div v-for="card in cards">
+                                <div class="info info-one flex direction-column content-space-between items-center">
+                                    <img class="image-one" src="../images/person-one.png">
+                                    <p class="introduction flex content-center items-center">
+                                        <span class="name">{{card.name}}</span><img class="logo" src="../images/lvs.png" alt="">
+                                    </p>
+                                    <p class="small">{{card.introduction}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <div class="title">最关心职工生活的企业功臣红娘排行榜</div>
+                        <div class="cards flex">
+                            <div v-for="card in cards">
+                                <div class="info info-two flex direction-column content-space-between items-center">
+                                    <img class="image-two" src="../images/person-two.png">
+                                    <p class="introduction flex content-center items-center">
+                                        <span class="name">{{card.name}}</span><img class="logo" src="../images/lv9.png" alt="">
+                                    </p>
+                                    <p class="small">{{card.introduction}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner">
+                        <div class="theme flex content-space-between">
+                            <div class="title">靖欣红娘</div>
+                            <a href="javascript:" class="more">查看更多</a>
+                        </div>
+                        <div class="cards flex">
+                            <div v-for="card in cards">
+                                <div class="info info-three flex direction-column content-space-between items-center">
+                                    <img class="image-three" src="../images/person-three.png">
+                                    <p class="introduction flex content-center items-center">
+                                        <span class="name">{{card.name}}</span><img class="logo" src="../images/lv3.png" alt="">
+                                    </p>
+                                    <p class="small">{{card.introduction}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <footer class="footerBox">
+                <nav class="foot-nav flex content-space-around items-center">
+                    <b>首页</b>
+                    <b>记录</b>
+                    <b>自由活动</b>
+                    <b>个人中心</b>
+                </nav>
+            </footer>
+        </div>
+       
+        <script src="https://cdn.bootcss.com/vue/2.5.14/vue.min.js"></script>  
+        <script src="./demo.js"></script>     
+    </body>
+</html>
