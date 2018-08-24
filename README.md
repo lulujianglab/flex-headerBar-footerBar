@@ -10,9 +10,9 @@
 
 现在我们把中间的内容块抠出来，主要分析下“头尾固定，中间滚动”这种结构在flex布局下是怎么实现的
 
-整个页面结构超级简单，由外向里分别是头部(header)、中间内容块(section)、脚部(footer),然后被一个.container包裹就实现了满屏
+整个页面结构超级简单，分别是头部(header)、中间内容块(section)、脚部(footer),然后被一个.container包裹就实现了满屏
 
-首先是整个页面骨架(html)
+### 整个页面骨架(html)
 
 ```
 <!-- 整个页面结构 -->
@@ -39,13 +39,15 @@
 </section>
 ```
 
-flex弹性布局样式可以查看该文件夹下static文件下的global.css(flex样式)，main.css(头尾固定页面基本样式)
+### flex弹性布局样式可以查看该文件夹下static文件下的global.css(flex样式)，main.css(头尾固定页面基本样式)
 
 当然，头尾部我们也可以不定义高度，被子元素撑开
 
 底部的button如果都是同样的字数，那我们就可以设置```flex:1```均分就好了，不管多少个都是一样的，不用计算；但如果字数不同，我们就不能用这个属性值了，得基于```flex-basis```,具体可以查看我的另一篇博客
 
-到此，我们就实现了[“头尾固定，中间滚动”这种页面结构](https://lulujianglab.github.io/flex-headerBar_footerBar/)。所以，flex弹性布局超赞了有木有！！是不是整个结构简单明了，通俗易懂，比以往基于fixed定位,CSS2+HTML4的方法简直好用太多，省去了解决手机上一些奇葩问题的麻烦，也不用去计算一堆margin、padding以及position等等
+到此，我们就实现了[“头尾固定，中间滚动”这种页面结构](https://lulujianglab.github.io/flex-headerBar_footerBar/)
+
+所以，flex弹性布局超赞了有木有！！是不是整个结构简单明了，通俗易懂，比以往基于fixed定位,CSS2+HTML4的方法简直好用太多，省去了解决手机上一些奇葩问题的麻烦，也不用去计算一堆margin、padding以及position等等
 
 虽然会有兼容性的问题，但flex至少在手机浏览器中都是支持的，虽然写法上可能为了考虑老版本要多写一些兼容性的无用CSS
 
